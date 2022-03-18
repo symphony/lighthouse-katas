@@ -1,5 +1,5 @@
 const whereCanIPark = function (spots, vehicle) {
-  // check type of car before loop so it only needs to be checked once. jump to respective case statement
+  // check type of car before looping so it only needs to be checked once. jump to respective function
   switch (vehicle) {
     case "regular":
       for (let y = 0; y < spots.length; y++) {
@@ -30,6 +30,7 @@ const whereCanIPark = function (spots, vehicle) {
         }
       }
       break;
+
     default:
       break;
   }
