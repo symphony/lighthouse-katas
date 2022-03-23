@@ -4,13 +4,15 @@ const squareCode = function(message) {
   const sqr = Math.ceil(Math.sqrt(len)); // Square root of length rounded up
   let encodedMsg = "";
 
+  // outer loop used to shift right horizontally by 1 character at a time
   for (let i = 0; i < sqr; i++) {
-    for (let j = i; j < len; j+=sqr) {
+    // inner loop grabs each character vertically by jumping by sqr amount
+    for (let j = i; j < len; j += sqr) {
         encodedMsg += msg[j];
     }
-    encodedMsg += " ";
+    encodedMsg += " "; // add space after each encoded "word"
   }
-  return encodedMsg;
+  return encodedMsg.trim();
 }
 
 console.log(squareCode("chill out")); // clu hlt io
